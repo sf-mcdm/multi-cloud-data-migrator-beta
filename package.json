@@ -1,6 +1,6 @@
 {
   "name": "multi-cloud-data-migrator-beta",
-  "version": "1.258.147",
+  "version": "1.258.148",
   "description": "Salesforce App to migrate Salesforce Clouds data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,18 @@
     "oclif.manifest.json",
     "dist/ui-web"
   ],
+  "scripts": {
+    "clean": "rimraf lib dist oclif.manifest.json tmp",
+    "compile": "tsc",
+    "bundle": "webpack --config webpack.config.js --mode=production",
+    "build:ui": "cd ui && npm install && npm run build",
+    "obfuscate": "node build-tools/encrypt.mjs",
+    "bytecode": "bytenode --compile dist/index.js",
+    "build": "npm run clean && npm run compile && npm run bundle && npm run build:ui && npm run bytecode && npm run obfuscate && npx oclif manifest",
+    "prepack": "npm run build",
+    "publish:public": "node publish-public.mjs",
+    "publish:beta": "node publish-public.mjs --beta"
+  },
   "author": "LOUDRASSI Ahmed",
   "license": "LOUDRASSI Ahmed",
   "dependencies": {
@@ -26,6 +38,24 @@
     "p-queue": "^8.1.0",
     "semver": "^7.7.3",
     "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
+    "@types/express": "^4.17.21",
+    "@types/kill-port": "^2.0.3",
+    "@types/semver": "^7.7.1",
+    "@types/ws": "^8.5.10",
+    "bytenode": "^1.5.7",
+    "copy-webpack-plugin": "^11.0.0",
+    "glob": "^11.0.3",
+    "javascript-obfuscator": "^4.1.1",
+    "oclif": "^4.17.46",
+    "rimraf": "^5.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "typescript": "^5.4.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^4.10.0",
+    "webpack-obfuscator": "^3.5.1"
   },
   "oclif": {
     "commands": "./dist/commands",

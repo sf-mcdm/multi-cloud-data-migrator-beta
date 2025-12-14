@@ -1,0 +1,83 @@
+{
+  "standard": [
+    {
+      "groupLabel": "Revenue Cloud",
+      "options": [
+        {
+          "value": "revenue-cloud-advanced",
+          "displayValue": "Revenue Cloud Advanced"
+        },
+        {
+          "value": "revenue-cloud-billing",
+          "displayValue": "Revenue Cloud Billing"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Digital Insurance",
+      "options": [
+        {
+          "value": "digital-insurance",
+          "displayValue": "Digital Insurance Standard"
+        }
+      ]
+    }
+  ],
+  "deepClone": [
+    {
+      "groupLabel": "Product & Product Management",
+      "options": [
+        {
+          "value": "revenue-cloud-advanced-product",
+          "displayValue": "Revenue Cloud: Product Bundle",
+          "label": "Product SKU(Stock Keeping Unit)"
+        },
+        {
+          "value": "digital-insurance-product",
+          "displayValue": "Digital Insurance: Product Bundle",
+          "label": "Product SKU(Stock Keeping Unit)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Product Catalogs",
+      "options": [
+        {
+          "value": "revenue-cloud-advanced-product-catalog",
+          "displayValue": "Revenue Cloud Product Catalog",
+          "label": "Catalog Code(Catalog.Code)"
+        },
+        {
+          "value": "digital-insurance-product-catalog",
+          "displayValue": "Insurance Product Catalog",
+          "label": "Catalog Code(Catalog.Code)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Advanced Configurator",
+      "options": [
+        {
+          "value": "advanced-configurator-cml",
+          "displayValue": "Constraint Model Language (CML)",
+          "label": "Constraint Model(Expression Set) API Name"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Omni Studio Components",
+      "options": [
+        {
+          "value": "data-raptor-standard",
+          "displayValue": "Data Raptor",
+          "label": "Data Raptor Name(OmniDataTransform.Name)"
+        },
+        {
+          "value": "integration-procedure-standard",
+          "displayValue": "Integration Procedure",
+          "label": "Integration Procedure Name(OmniProcess.Name)"
+        }
+      ]
+    }
+  ]
+}

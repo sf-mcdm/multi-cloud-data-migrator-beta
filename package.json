@@ -1,6 +1,6 @@
 {
   "name": "multi-cloud-data-migrator-beta",
-  "version": "1.258.144",
+  "version": "1.258.145",
   "description": "Salesforce App to migrate Salesforce Clouds data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

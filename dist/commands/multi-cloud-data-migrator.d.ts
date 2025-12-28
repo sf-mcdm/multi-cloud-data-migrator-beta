@@ -32,5 +32,7 @@ export default class MultiCloudMigrator extends Command {
     private _resolvePreskusToSkus;
     private _collectRelatedSkus;
     private runDestructivePhase;
+    private orgSettings;
+    private loadOrgSettings;
     run(): Promise<void>;
 }

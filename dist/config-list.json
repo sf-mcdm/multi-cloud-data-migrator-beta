@@ -5,11 +5,13 @@
       "options": [
         {
           "value": "revenue-cloud-advanced",
-          "displayValue": "Revenue Cloud Advanced"
+          "displayValue": "Revenue Cloud Advanced",
+          "availableForDestruct": false
         },
         {
           "value": "revenue-cloud-billing",
-          "displayValue": "Revenue Cloud Billing"
+          "displayValue": "Revenue Cloud Billing",
+          "availableForDestruct": false
         }
       ]
     },
@@ -18,7 +20,8 @@
       "options": [
         {
           "value": "digital-insurance",
-          "displayValue": "Digital Insurance Standard"
+          "displayValue": "Digital Insurance Standard",
+          "availableForDestruct": false
         }
       ]
     }
@@ -30,12 +33,24 @@
         {
           "value": "revenue-cloud-advanced-product",
           "displayValue": "Revenue Cloud: Product Bundle",
-          "label": "Product SKU(Stock Keeping Unit)"
+          "label": "Product SKU(Stock Keeping Unit)",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "Product2",
+            "labelField": "Name",
+            "valueField": "StockKeepingUnit"
+          }
         },
         {
           "value": "digital-insurance-product",
           "displayValue": "Digital Insurance: Product Bundle",
-          "label": "Product SKU(Stock Keeping Unit)"
+          "label": "Product SKU(Stock Keeping Unit)",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "Product2",
+            "labelField": "Name",
+            "valueField": "StockKeepingUnit"
+          }
         }
       ]
     },
@@ -45,12 +60,24 @@
         {
           "value": "revenue-cloud-advanced-product-catalog",
           "displayValue": "Revenue Cloud Product Catalog",
-          "label": "Catalog Code(Catalog.Code)"
+          "label": "Catalog Code(Catalog.Code)",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "ProductCatalog",
+            "labelField": "Name",
+            "valueField": "Code"
+          }
         },
         {
           "value": "digital-insurance-product-catalog",
           "displayValue": "Insurance Product Catalog",
-          "label": "Catalog Code(Catalog.Code)"
+          "label": "Catalog Code(Catalog.Code)",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "ProductCatalog",
+            "labelField": "Name",
+            "valueField": "Code"
+          }
         }
       ]
     },
@@ -60,7 +87,51 @@
         {
           "value": "advanced-configurator-cml",
           "displayValue": "Constraint Model Language (CML)",
-          "label": "Constraint Model(Expression Set) API Name"
+          "label": "Constraint Model(Expression Set) API Name",
+          "availableForDestruct": true,
+          "searchConfig": {
+            "sobject": "ExpressionSetDefinition",
+            "labelField": "MasterLabel",
+            "valueField": "DeveloperName"
+          }
+        }
+      ]
+    },
+    {
+      "groupLabel": "Pricing Settings",
+      "options": [
+        {
+          "value": "pricing-recipe",
+          "displayValue": "Pricing Recipe",
+          "label": "PricingRecipe.DeveloperName",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "PricingRecipe",
+            "labelField": "MasterLabel",
+            "valueField": "DeveloperName"
+          }
+        },
+        {
+          "value": "decision-table",
+          "displayValue": "Decision Table Definition",
+          "label": "DecisionTable.DeveloperName",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "DecisionTable",
+            "labelField": "SetupName",
+            "valueField": "DeveloperName"
+          }
+        },
+        {
+          "value": "pricing-procedure",
+          "displayValue": "Pricing Procedure",
+          "label": "Pricing Procedure(Expression Set) API Name",
+          "availableForDestruct": false,
+          "searchConfig": {
+            "sobject": "ExpressionSetDefinition",
+            "labelField": "MasterLabel",
+            "valueField": "DeveloperName"
+          }
         }
       ]
     },
@@ -69,13 +140,25 @@
       "options": [
         {
           "value": "data-raptor-standard",
-          "displayValue": "Data Raptor",
-          "label": "Data Raptor Name(OmniDataTransform.Name)"
+          "displayValue": "Data Mapper",
+          "label": "Data Mapper Name(OmniDataTransform.Name)",
+          "availableForDestruct": true,
+          "searchConfig": {
+            "sobject": "OmniDataTransform",
+            "labelField": "Name",
+            "valueField": "Name"
+          }
         },
         {
           "value": "integration-procedure-standard",
           "displayValue": "Integration Procedure",
-          "label": "Integration Procedure Name(OmniProcess.Name)"
+          "label": "Integration Procedure Name(OmniProcess.Name)",
+          "availableForDestruct": true,
+          "searchConfig": {
+            "sobject": "OmniProcess",
+            "labelField": "Name",
+            "valueField": "Name"
+          }
         }
       ]
     }

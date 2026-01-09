@@ -17,6 +17,7 @@ export interface LookupCfg {
     polymorphicConfig?: Record<string, PolymorphicTargetCfg>;
 }
 export interface ObjectCfg {
+    scope?: "migrationOnly" | "destructionOnly" | "both";
     sobject: string;
     query: string;
     externalIdField?: string;
@@ -24,6 +25,7 @@ export interface ObjectCfg {
     lookups: LookupCfg[];
     overrides?: Record<string, any>;
     overridesForDelete?: Record<string, any>;
+    deleteAfterUpdate?: boolean;
     useRestApi?: boolean;
     binaryFields?: string[];
     mode?: "insert-only";

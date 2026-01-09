@@ -98,44 +98,6 @@
       ]
     },
     {
-      "groupLabel": "Pricing Settings",
-      "options": [
-        {
-          "value": "pricing-recipe",
-          "displayValue": "Pricing Recipe",
-          "label": "PricingRecipe.DeveloperName",
-          "availableForDestruct": false,
-          "searchConfig": {
-            "sobject": "PricingRecipe",
-            "labelField": "MasterLabel",
-            "valueField": "DeveloperName"
-          }
-        },
-        {
-          "value": "decision-table",
-          "displayValue": "Decision Table Definition",
-          "label": "DecisionTable.DeveloperName",
-          "availableForDestruct": false,
-          "searchConfig": {
-            "sobject": "DecisionTable",
-            "labelField": "SetupName",
-            "valueField": "DeveloperName"
-          }
-        },
-        {
-          "value": "pricing-procedure",
-          "displayValue": "Pricing Procedure",
-          "label": "Pricing Procedure(Expression Set) API Name",
-          "availableForDestruct": false,
-          "searchConfig": {
-            "sobject": "ExpressionSetDefinition",
-            "labelField": "MasterLabel",
-            "valueField": "DeveloperName"
-          }
-        }
-      ]
-    },
-    {
       "groupLabel": "Omni Studio Components",
       "options": [
         {
